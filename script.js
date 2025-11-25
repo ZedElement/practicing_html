@@ -4,7 +4,7 @@ const unorderedList = document.querySelector("ul");
 const inputElement = document.querySelector("input");
 const buttonElement = document.querySelector("button");
 
-buttonElement.addEventListener("click", (event) => {
+buttonElement.addEventListener("click", function(event) {
     event.preventDefault();
 
     const myItem = inputElement.value;
@@ -22,10 +22,10 @@ buttonElement.addEventListener("click", (event) => {
 
     unorderedList.appendChild(listItem);
 
-    listBtn.addEventListener("click", () => {
+    listBtn.addEventListener("click", function() {
         unorderedList.removeChild(listItem);
     });
+
     inputElement.focus();
 });
-
 
